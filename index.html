@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discovery Video</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+	<style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    #player {
+      width: 100vw; /* 뷰포트 너비 100% */
+      height: 100vh; /* 뷰포트 높이 100% */
+    }
+  </style>
+</head>
+<body>
+	  <!-- 플레이어를 담을 div 요소 -->
+		<div id="player"></div>
+
+		<!-- YouTube Embed API 로드 -->
+		<script src="https://www.youtube.com/iframe_api"></script>
+		<script>
+			let player;
+	
+			function onYouTubeIframeAPIReady() {
+				player = new YT.Player('player', {
+					height: '100%',
+					width: '100%',
+					videoId: 'iV-tLF7U-n0', // 여기에 YouTube 동영상의 ID를 넣어주세요
+					playerVars: {
+						autoplay: 1,
+						loop: 1,
+						controls: 0,
+						fs: 0, // 전체 화면 버튼 표시
+						modestbranding: 1, // YouTube 로고 감춤
+						rel: 0, // 추천 동영상 감춤
+						showinfo: 0 // 제목 및 정보 감춤
+					}
+				});
+			}
+
+
+    // 플레이어가 준비되면 실행되는 함수
+    function onPlayerReady(event) {
+      // 플레이어가 준비되었을 때 할 작업 (예: 재생 버튼 표시 등)
+    }
+
+    // 동영상 상태가 변경될 때 실행되는 함수
+    function onPlayerStateChange(event) {
+      // 동영상 재생 상태 변경에 따른 작업 (예: 재생 중일 때 다른 요소 감추기 등)
+    }
+		</script>
+
+  <!-- 로고 -->
+  <h1><img src="https://www.discovery-expedition.com/_next/static/media/logo_pc.62dbca02.svg" alt="이미지 없음"></h1>
+
+  	<!-- header -->
+	<header>		
+		<ul id="gnb">
+			<li class="on">
+				<a href="#"><em></i>About Discovery</em></a>
+			</li>
+			<li>
+				<a href="#"><em>MEN</em></a>				
+				<ul>
+					<li><a href="#"><em>New</em></a></li>
+					<li><a href="#"><em>Best</em></a></li>
+					<li><a href="#"><em>상의</em></a></li>
+					<li><a href="#"><em>하의</em></a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#"><em>WOMEN</em></a>
+				<ul>
+					<li><a href="#"><em>New</em></a></li>
+					<li><a href="#"><em>Best</em></a></li>
+					<li><a href="#"><em>상의</em></a></li>
+					<li><a href="#"><em>하의</em></a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#"><em>SHOES</em></a>
+				<ul>
+					<li><a href="#"><em>라이프</em></a></li>
+					<li><a href="#"><em>컬렉션</em></a></li>			
+				</ul>
+			</li>
+			<li>				
+				<a href="#"><em>ACC</em></a>
+				<ul>
+					<li><a href="#"><em>가방</em></a></li>						
+					<li><a href="#"><em>모자</em></a></li>						
+					<li><a href="#"><em>용품</em></a></li>						
+				</ul>
+			</li>	
+			<li>				
+				<a href="#"><em>KIDS</em></a>
+				<ul>
+					<li><a href="#"><em>New</em></a></li>
+					<li><a href="#"><em>Best</em></a></li>
+					<li><a href="#"><em>상의</em></a></li>
+					<li><a href="#"><em>하의</em></a></li>
+				</ul>
+			</li>	
+		</ul>
+	</header>
+
+  sns 버튼모음
+	<ul id="sns">
+		<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+		<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+		<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+		<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+		<li><a href="#"><i class="fa fa-android"></i></a></li>
+	</ul>
+
+  	<!-- 웹폰트 텍스트박스 -->
+	<section class="txtBox">
+		<p class="txt">디스커버리<b>24SS</b></p>
+		<p class="tit">Ready to <em>Summer</em></p>
+	</section>	
+	
+	<!-- 하단 컨텐츠박스 -->
+	<section id="side">
+		<div class="con">
+			<p>
+				<em>크롭 래쉬가드</em>
+				<a href="#"><img src="img/full.avif" /></a>				
+			</p>
+			<p>
+				<em>돌핀 워터쇼츠</em>
+				<a href="#"><img src="img/water.avif" /></a>				
+			</p>
+		</div>	
+    
+		<!-- 자동롤링 버튼 -->
+		<div class="btnContents">
+			<i class="fa fa-angle-double-left"></i>
+			<i class="fa fa-angle-double-left"></i>  
+			<i class="fa fa-angle-double-left"></i>
+		</div>
+	</section>
+</body>
+</html>
